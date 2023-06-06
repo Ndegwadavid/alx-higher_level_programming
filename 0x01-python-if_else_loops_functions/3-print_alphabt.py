@@ -1,3 +1,4 @@
-for i in range(97, 123):
-    if chr(i) not in ['q', 'e']:
-        print(chr(i), end="")
+#!/usr/bin/python3
+for a in "abcdefghijklmnopqrstuvwxyz":
+    if(a not in "qe"):
+        print("{}".format(a), end='')
