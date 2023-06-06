@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-for number in range(100):
-    if int(number / 10) != number % 10 and int(number / 10) < number % 10:
-        print("{}{}".format(int(number / 10), number % 10), end="")
-        if (number != 89):
-            print(", ", end="")
-print("")
+for i in range(0, 10):
+    for j in range((i+1), 10):
+        if (i is not 8) or (j is not 9):
+            print("{}{}, ".format(i, j), end="")
+        else:
+            print("{}{}".format(i, j))
