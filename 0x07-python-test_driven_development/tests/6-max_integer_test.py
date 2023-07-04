@@ -3,7 +3,9 @@ import unittest
 max_integer = __import__('6-max_integer').max_integer
 """
 class TestMaxInteger(unittest.TestCase):
-import unittest/
+import unittest
+
+from django import test/
 
 from 0x03-python-data_structures.9-max_integer import max_integer
 
