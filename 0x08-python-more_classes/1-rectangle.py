@@ -1,58 +1,50 @@
 #!/usr/bin/python3
-"""This program define a class Rectangle with it attributes"""
+
+"""
+class Rectangle
+"""
 
 
-class Rectangle():
+class Rectangle:
     """
-    A Rectangle Class with the private instance attributes width and height
+    Rectangle class
     """
-
     def __init__(self, width=0, height=0):
-        """
-        Constructor of the class Rectangle
-          Args:
-            - width (default = 0): int
-            - heigth (default = 0): int
-        """
-        self.height = height
+        if type(width) is not int:
+            raise TypeError("width must be an integer")
+        if type(height) is not int:
+            raise TypeError("height must be an integer")
+        if width < 0:
+            raise ValueError("width must be >= 0")
+        if height < 0:
+            raise ValueError("height must be >= 0")
         self.width = width
+        self.height = height
 
+    # using the getter function
     @property
     def width(self):
-        """Getter of the property width"""
         return self.__width
 
+    # using setter funtion
     @width.setter
     def width(self, value):
-        """
-        Getter of the property value
-          Args:
-            - value: int
-        """
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError('width must be an integer')
-
-        if value < 0:
-            raise ValueError('width must be >= 0')
-
-        self.__width = value
+        elif value < 0:
+            raise ValueError("width must be >= 0")
+        else:
+            self.__width = value
 
     @property
     def height(self):
-        """Getter of the property height"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """
-        Getter of the property value
-          Args:
-            - value: int
-        """
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError('height must be an integer')
-
-        if value < 0:
-            raise ValueError('height must be >= 0')
-
-        self.__height = value
+        elif value < 0:
+            raise ValueError("height must be >= 0")
+        else:
+            self.__height = value
