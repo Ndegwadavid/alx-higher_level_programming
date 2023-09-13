@@ -1,4 +1,5 @@
-Higher level programming 
+Higher level programming:
+
 Python
 Javascript
 C
