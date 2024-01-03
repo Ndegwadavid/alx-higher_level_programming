@@ -1,6 +1,12 @@
 #!/usr/bin/node
-// reads file passed as arg
+// script that writes a string to a file
+
 const fs = require('fs');
-fs.writeFile(process.argv[2], process.argv[3], (error) => {
-  error && console.log(error);
-});
+const args = process.argv;
+const text = args[2];
+const file = args[3];
+fs.writeFile(file, text, 'utf-8', (err) => {
+    if (err) {
+    console.log(err);
+  }
+})
